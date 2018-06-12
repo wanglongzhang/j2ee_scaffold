@@ -1,7 +1,7 @@
 
---需要 MySQL 5.6.5以上的版本
-CREATE DATABASE beauty_ssm;
-USE beauty_ssm;
+-- 需要 MySQL 5.6.5以上的版本
+CREATE DATABASE scaffold_project;
+USE scaffold_project;
 
 -- 用户表
 CREATE TABLE _user(
@@ -39,7 +39,7 @@ KEY `idx_goods_id`(`goods_id`)
 )ENGINE=INNODB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='订单表';
 
 
---插入初始数据
+-- 插入初始数据
 INSERT INTO 
 	_user(user_name, user_phone, score)
 VALUES
