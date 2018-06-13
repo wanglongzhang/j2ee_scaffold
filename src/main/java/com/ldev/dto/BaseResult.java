@@ -19,9 +19,9 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 public class BaseResult<T> implements Serializable {
 
 
-	private static final long serialVersionUID = -4185151304730685014L;
+    private static final long serialVersionUID = -4185151304730685014L;
 
-	private boolean success;
+    private boolean success;
 
     private T data;
 
@@ -61,9 +61,9 @@ public class BaseResult<T> implements Serializable {
         this.error = error;
     }
 
-	@Override
-	public String toString() {
-		return "BaseResult [success=" + success + ", data=" + data + ", error=" + error + "]";
-	}
+    @Override
+    public String toString() {
+        return "BaseResult [success=" + success + ", data=" + data + ", error=" + error + "]";
+    }
 
 }

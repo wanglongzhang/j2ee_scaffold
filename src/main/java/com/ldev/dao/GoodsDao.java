@@ -7,7 +7,7 @@ import com.ldev.entity.Goods;
 import org.apache.ibatis.annotations.Param;
 
 public interface GoodsDao {
-	 /**
+     /**
      * 根据偏移量查询可用商品列表
      *
      * @param offset

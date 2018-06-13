@@ -5,13 +5,13 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-		http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context
-		http://www.springframework.org/schema/context/spring-context.xsd
-		http://www.springframework.org/schema/mvc 
-		http://www.springframework.org/schema/mvc/spring-mvc.xsd
-		http://www.springframework.org/schema/aop
-		http://www.springframework.org/schema/aop/spring-aop.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- 激活组件扫描功能,扫描aop的相关组件组件 -->
     <context:component-scan base-package="com.ldev.aop"/>
@@ -20,14 +20,14 @@
 
     <!--开始springMVC注解模式-->
     <!--简化配置:
-    	1、自动注册DefaultAnnotationHandlerMapping,AnnotationMethodHandlerAdapter
-    	2、提供一系列:数据绑定,数字和日期的format,@NumberFormat,@DataTimeFormat,xml,json默认读写支持
+        1、自动注册DefaultAnnotationHandlerMapping,AnnotationMethodHandlerAdapter
+        2、提供一系列:数据绑定,数字和日期的format,@NumberFormat,@DataTimeFormat,xml,json默认读写支持
     -->
     <mvc:annotation-driven />
 
     <!--2:静态资源默认servlet配置
-    	1、加入对静态资源的处理:js,css,gif,png
-    	2、允许使用"/"做整体映射
+        1、加入对静态资源的处理:js,css,gif,png
+        2、允许使用"/"做整体映射
     -->
     <mvc:default-servlet-handler/>
 
@@ -43,7 +43,7 @@
 
     <bean class="com.ldev.config.SwaggerConfig"/>
 
-	<!--全局异常捕捉 -->
-	<bean class="com.ldev.exception.GlobalExceptionResolver" />
-	
+    <!--全局异常捕捉 -->
+    <bean class="com.ldev.exception.GlobalExceptionResolver" />
+    
 </beans>

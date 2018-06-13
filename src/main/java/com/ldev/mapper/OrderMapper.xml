@@ -3,29 +3,29 @@
 <mapper namespace="com.ldev.dao.OrderDao">
 
 
-	<insert id="insertOrder">
-		INSERT INTO
-		`order`(user_id,goods_id,title)
-		VALUES
-		(#{userId},#{goodsId},#{title})
-	</insert>
+    <insert id="insertOrder">
+        INSERT INTO
+        `order`(user_id,goods_id,title)
+        VALUES
+        (#{userId},#{goodsId},#{title})
+    </insert>
 
-	<select id="queryByUserPhone" resultType="Order">
-		SELECT *
-		FROM
-		`order`, `user`
-		WHERE
-		`order`.user_id=`user`.user_id
-		AND
-		`user`.phone_number=#{userPhone}
-	</select>
+    <select id="queryByUserPhone" resultType="Order">
+        SELECT *
+        FROM
+        `order`, `user`
+        WHERE
+        `order`.user_id=`user`.user_id
+        AND
+        `user`.phone_number=#{userPhone}
+    </select>
 
-	<select id="queryAll" resultType="Order">
-		SELECT *
-		FROM `order`
-		ORDER BY
-		create_time DESC
-		limit #{offset},#{limit}
-	</select>
+    <select id="queryAll" resultType="Order">
+        SELECT *
+        FROM `order`
+        ORDER BY
+        create_time DESC
+        limit #{offset},#{limit}
+    </select>
 
 </mapper>

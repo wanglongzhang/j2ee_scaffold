@@ -24,24 +24,24 @@
   </sql>
 
   <select id="queryByPhone" resultType="User">
-		SELECT *
-		FROM `user`
-		WHERE
-	    phone_number= #{userPhone} limit 1
-	</select>
+        SELECT *
+        FROM `user`
+        WHERE
+        phone_number= #{userPhone} limit 1
+    </select>
 
   <select id="queryAll" resultType="User">
-		SELECT *
-		FROM `user`
-		ORDER BY create_time DESC
-		limit #{offset},#{limit}
-	</select>
+        SELECT *
+        FROM `user`
+        ORDER BY create_time DESC
+        limit #{offset},#{limit}
+    </select>
 
   <update id="addScore">
-		UPDATE `user`
-		SET
-		integral = integral + #{add}
-	</update>
+        UPDATE `user`
+        SET
+        integral = integral + #{add}
+    </update>
 
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     <!--

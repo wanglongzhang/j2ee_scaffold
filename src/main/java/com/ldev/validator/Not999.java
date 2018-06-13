@@ -18,11 +18,11 @@ import java.lang.annotation.Target;
 @Documented
 public @interface Not999 {
 
-	// 提示信息,可以写死,可以填写国际化的key
-	String message() default "{com.ldev.validator.not999}";
+    // 提示信息,可以写死,可以填写国际化的key
+    String message() default "{com.ldev.validator.not999}";
 
-	// 下面这两个属性必须添加
-	Class<?>[] groups() default {};
+    // 下面这两个属性必须添加
+    Class<?>[] groups() default {};
 
-	Class<? extends Payload>[] payload() default {};
+    Class<? extends Payload>[] payload() default {};
 }

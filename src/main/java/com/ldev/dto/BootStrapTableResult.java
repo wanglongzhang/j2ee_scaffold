@@ -19,17 +19,17 @@ public class BootStrapTableResult<T> implements Serializable {
     private List<T> data;
 
     public BootStrapTableResult(List<T> data) {
-		super();
-		this.data = data;
-	}
+        super();
+        this.data = data;
+    }
 
-	public List<T> getData()
-	{
-		return data;
-	}
+    public List<T> getData()
+    {
+        return data;
+    }
 
-	public void setData(List<T> data)
-	{
-		this.data = data;
-	}
+    public void setData(List<T> data)
+    {
+        this.data = data;
+    }
 }

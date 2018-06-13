@@ -17,10 +17,10 @@ import com.fasterxml.jackson.databind.SerializerProvider;
  */
 public class CustomDateSerializer extends JsonSerializer<Date> {
 
-	@Override
-	public void serialize(Date value, JsonGenerator jsonGenerator, SerializerProvider provider) throws IOException, JsonProcessingException {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");  
+    @Override
+    public void serialize(Date value, JsonGenerator jsonGenerator, SerializerProvider provider) throws IOException, JsonProcessingException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");  
         jsonGenerator.writeString(sdf.format(value));  
-	}
+    }
 
 }
