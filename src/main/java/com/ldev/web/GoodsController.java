@@ -6,6 +6,7 @@ import com.ldev.exception.BizException;
 import com.ldev.service.GoodsService;
 import com.ldev.dto.BaseResult;
 import com.ldev.dto.BootStrapTableResult;
+import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/goods")
+@Api(tags="GoodsController")
 public class GoodsController {
     
     private final Logger LOG = LoggerFactory.getLogger(this.getClass());

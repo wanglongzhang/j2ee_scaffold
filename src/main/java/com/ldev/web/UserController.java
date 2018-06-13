@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.ldev.entity.User;
 import com.ldev.service.UserService;
+import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import com.ldev.dto.BootStrapTableResult;
 
 @Controller
 @RequestMapping("/user")
+@Api(tags="UserController")
 public class UserController {
 
     private final Logger LOG = LoggerFactory.getLogger(this.getClass());

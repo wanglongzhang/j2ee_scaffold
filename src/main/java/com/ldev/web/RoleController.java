@@ -3,6 +3,7 @@ package com.ldev.web;
 import com.ldev.dto.BootStrapTableResult;
 import com.ldev.entity.User;
 import com.ldev.service.UserService;
+import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/role")
+@Api(tags="RoleController")
 public class RoleController {
 
     private final Logger LOG = LoggerFactory.getLogger(this.getClass());
