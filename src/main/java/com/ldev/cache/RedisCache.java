@@ -76,7 +76,8 @@ public class RedisCache {
         return result;
     }
 
-    public <T> T getCache(final String key, Class<T> targetClass) {
+    public <T> T getCache(final String key, Class<T> targetClass)
+    {
         byte[] result = redisTemplate.execute(new RedisCallback<byte[]>() {
             @Override
             public byte[] doInRedis(RedisConnection connection) throws DataAccessException {
@@ -89,7 +90,8 @@ public class RedisCache {
         return ProtoStuffSerializerUtil.deserialize(result, targetClass);
     }
 
-    public <T> List<T> getListCache(final String key, Class<T> targetClass) {
+    public <T> List<T> getListCache(final String key, Class<T> targetClass)
+    {
         byte[] result = redisTemplate.execute(new RedisCallback<byte[]>() {
             @Override
             public byte[] doInRedis(RedisConnection connection) throws DataAccessException {
@@ -107,7 +109,8 @@ public class RedisCache {
      * 
      * @param key
      */
-    public void deleteCache(String key) {
+    public void deleteCache(String key)
+    {
         redisTemplate.delete(key);
     }
 
@@ -123,8 +126,6 @@ public class RedisCache {
 
     /**
      * 清空所有缓存
-     * 
-     * @param key
      */
     public void clearCache() {
         deleteCacheWithPattern(RedisCache.CAHCENAME+"|*");

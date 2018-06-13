@@ -1,6 +1,7 @@
 package com.ldev.exception;
 
-import com.alibaba.fastjson.JSON;
+//import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ldev.dto.BaseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,7 +38,8 @@ public class GlobalExceptionResolver implements HandlerExceptionResolver {
         try {
             PrintWriter writer = response.getWriter();
             BaseResult<String> result = new BaseResult(false, ex.getMessage());
-            writer.write(JSON.toJSONString(result));
+            ObjectMapper objectMapper = new ObjectMapper();
+            writer.write(objectMapper.writeValueAsString(result));
             writer.flush();
         } catch (IOException e) {
             LOG.error("Exception:", e);
