@@ -5,7 +5,7 @@
 
 	<insert id="insertOrder">
 		INSERT INTO
-		_order(user_id,goods_id,title)
+		`order`(user_id,goods_id,title)
 		VALUES
 		(#{userId},#{goodsId},#{title})
 	</insert>
@@ -13,16 +13,16 @@
 	<select id="queryByUserPhone" resultType="Order">
 		SELECT *
 		FROM
-		_order, _user
+		`order`, `user`
 		WHERE
-		_order.user_id=_user.user_id
+		`order`.user_id=`user`.user_id
 		AND
-		_user.user_phone=#{userPhone}
+		`user`.phone_number=#{userPhone}
 	</select>
 
 	<select id="queryAll" resultType="Order">
 		SELECT *
-		FROM _order
+		FROM `order`
 		ORDER BY
 		create_time DESC
 		limit #{offset},#{limit}

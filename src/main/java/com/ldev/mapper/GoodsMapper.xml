@@ -5,13 +5,13 @@
 
 	<select id="queryAll" resultType="Goods">
 		SELECT *
-		FROM _goods
+		FROM `goods`
 		ORDER BY create_time DESC
 		limit #{offset},#{limit}
 	</select>
 
 	<update id="reduceNumber">
-		UPDATE _goods 
+		UPDATE `goods`
 		SET 
 		number = number -1
 		WHERE

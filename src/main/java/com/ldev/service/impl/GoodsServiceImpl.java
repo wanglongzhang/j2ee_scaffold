@@ -60,7 +60,7 @@ public class GoodsServiceImpl implements GoodsService {
 		if (useProcedure) {
 			// 通过存储方式的方法进行操作
 			Map<String, Object> map = new HashMap<String, Object>();
-			map.put("userId", user.getUserId());
+			map.put("userId", user.getId());
 			map.put("goodsId", goodsId);
 			map.put("title", "抢购");
 			map.put("result", null);
@@ -77,7 +77,7 @@ public class GoodsServiceImpl implements GoodsService {
 			}
 		} else {
 
-			int inserCount = orderDao.insertOrder(user.getUserId(), goodsId, "普通买卖");
+			int inserCount = orderDao.insertOrder(user.getId(), goodsId, "普通买卖");
 			if (inserCount <= 0) {
 				// 买卖失败
 				throw new BizException(ResultEnum.DB_UPDATE_RESULT_ERROR.getMsg());
