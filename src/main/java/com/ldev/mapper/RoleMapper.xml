@@ -19,6 +19,14 @@
     -->
     id, role_name, create_time, update_time, delete_status
   </sql>
+
+  <select id="queryAll" resultType="Role">
+		SELECT *
+		FROM `role`
+		ORDER BY id DESC
+		limit #{offset},#{limit}
+	</select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     <!--
       WARNING - @mbg.generated

@@ -20,6 +20,14 @@
     -->
     id, menu_code, menu_name, permission_code, permission_name, required_permission
   </sql>
+
+  <select id="queryAll" resultType="Permission">
+		SELECT *
+		FROM `permission`
+		ORDER BY id DESC
+		limit #{offset},#{limit}
+	</select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     <!--
       WARNING - @mbg.generated
