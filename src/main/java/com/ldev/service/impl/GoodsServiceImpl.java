@@ -31,7 +31,7 @@ public class GoodsServiceImpl implements GoodsService {
     @Autowired
     private UserDao userDao;
     @Autowired
-    private RedisCache cache;
+    private RedisCache<String, String> cache;
 
     @Override
     public List<Goods> getGoodsList(int offset, int limit) {

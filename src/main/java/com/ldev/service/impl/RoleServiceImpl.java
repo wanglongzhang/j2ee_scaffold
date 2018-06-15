@@ -21,7 +21,7 @@ public class RoleServiceImpl implements RoleService {
     @Autowired
     private RoleDao roleDao;
     @Autowired
-    private RedisCache cache;
+    private RedisCache<String, String> cache;
     
     
     @Override
@@ -41,6 +41,11 @@ public class RoleServiceImpl implements RoleService {
             LOG.info("get cache with key:"+cache_key);
         }
         return result_cache;
+    }
+
+    List<Role> findUserRole(String userName)
+    {
+        roleDao.queryAllRoleByUserName(userName);
     }
     
     

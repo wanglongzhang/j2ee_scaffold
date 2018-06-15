@@ -37,7 +37,7 @@ public class BizQuartz {
     @Autowired
     private UserDao userDao;
     @Autowired
-    private RedisCache cache;
+    private RedisCache<String, String> cache;
     
     /**
      * 用户自动加积分
@@ -56,7 +56,7 @@ public class BizQuartz {
     @Scheduled(cron = "0 0/5 * * * ? ")
     public void cacheClear() {
         LOG.info("@Scheduled-------cacheClear()");
-        cache.clearCache();
+        cache.deleteCacheWithPattern(RedisCache.CAHCENAME+"|*");
     }
     
 }

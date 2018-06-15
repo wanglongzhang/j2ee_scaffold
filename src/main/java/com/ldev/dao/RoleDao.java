@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface RoleDao {
 
+    List<Role> queryAllRoleByUserName(String userName);
     /**
      * 根据偏移量查询用户列表
      *

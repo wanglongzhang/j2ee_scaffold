@@ -48,9 +48,10 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
 
-        <!-- 配置表信息 -->
+        <!-- 配置表信息 tableName="sys_%" -->
         <table schema="${jdbc.schema}"
-               tableName="sys_%"
+
+               tableName="user_role"
                enableCountByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false">

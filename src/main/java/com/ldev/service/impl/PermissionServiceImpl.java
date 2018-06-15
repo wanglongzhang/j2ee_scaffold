@@ -21,7 +21,7 @@ public class PermissionServiceImpl implements PermissionService {
     @Autowired
     private PermissionDao permissionDao;
     @Autowired
-    private RedisCache cache;
+    private RedisCache<String, String> cache;
     
     
     @Override

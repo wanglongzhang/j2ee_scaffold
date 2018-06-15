@@ -93,7 +93,7 @@ CREATE TABLE `role` (
   `role_name` varchar(20) DEFAULT NULL COMMENT '角色名',
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `delete_status` varchar(1) DEFAULT '1' COMMENT '是否有效  1有效  2无效',
+  `status` varchar(1) DEFAULT '1' COMMENT '是否有效  1有效  2无效',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='后台角色表';
 
@@ -114,7 +114,7 @@ CREATE TABLE `role_permission` (
   `permission_id` int(11) DEFAULT NULL COMMENT '权限id',
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `delete_status` varchar(1) DEFAULT '1' COMMENT '是否有效 1有效     2无效',
+  `status` varchar(1) DEFAULT '1' COMMENT '是否有效 1有效     2无效',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='角色-权限关联表';
 
@@ -153,7 +153,7 @@ CREATE TABLE `user` (
   `role_id` int(11) DEFAULT '0' COMMENT '角色ID',
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
-  `delete_status` varchar(1) DEFAULT '1' COMMENT '是否有效  1有效  2无效',
+  `status` varchar(1) DEFAULT '1' COMMENT '是否有效  1有效  2无效',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10008 DEFAULT CHARSET=utf8 COMMENT='运营后台用户表';
 

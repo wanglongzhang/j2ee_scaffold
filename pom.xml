@@ -20,6 +20,16 @@
             <artifactId>shiro-spring</artifactId>
             <version>1.4.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-web</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>1.4.0</version>
+        </dependency>
 
         <dependency>
             <groupId>io.springfox</groupId>
@@ -302,7 +312,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <configurationFile>src/main/resources/generatorConfig.xml</configurationFile>
+                            <configurationFile>src/main/resources/mybatisGeneratorConfig.xml</configurationFile>
                             <verbose>true</verbose>
                             <overwrite>false</overwrite>
                         </configuration>

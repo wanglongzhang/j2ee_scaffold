@@ -25,6 +25,7 @@ public interface UserDao {
      */
     List<User> queryAll(@Param("offset") int offset, @Param("limit") int limit);
 
+    User selectByUserName(String userName);
 
     /**
      * 增加积分

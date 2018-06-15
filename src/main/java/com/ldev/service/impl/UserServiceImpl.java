@@ -16,10 +16,11 @@ import com.ldev.service.UserService;
 public class UserServiceImpl implements UserService {
 
     private final Logger LOG = LoggerFactory.getLogger(this.getClass());
+
     @Autowired
     private UserDao userDao;
     @Autowired
-    private RedisCache cache;
+    private RedisCache<String, String> cache;
     
     
     @Override
@@ -36,6 +37,10 @@ public class UserServiceImpl implements UserService {
             LOG.info("get cache with key:"+cache_key);
         }
         return result_cache;
+    }
+
+    public User findByName(String userName) {
+        return userDao.selectByUserName(userName);
     }
     
     
